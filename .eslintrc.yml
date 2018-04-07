@@ -1,0 +1,27 @@
+env:
+  browser: true
+  commonjs: true
+  es6: true
+globals:
+  Urls: false
+extends:
+  - 'eslint:recommended'
+  - 'plugin:react/recommended'
+parserOptions:
+  emcaVersion: 6
+  sourceType: module
+rules:
+  indent:
+    - error
+    - 4
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - single
+  semi:
+    - error
+    - always
+  require-jsdoc: off
+

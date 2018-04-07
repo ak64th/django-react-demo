@@ -1,0 +1,18 @@
+{% extends "blog/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+  <div id="app">
+    <div>
+      <nav class="navbar navbar-default"></nav>
+      <div class="container">
+        Hey buddy. This is the index.
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block extra_js_before %}
+  {{ block.super }}
+  <script src="{% static 'lib/js/someother.js' %}"></script>
+{% endblock %}

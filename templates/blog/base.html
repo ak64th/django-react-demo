@@ -1,0 +1,28 @@
+{% load render_bundle from webpack_loader %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Example</title>
+  {% render_bundle 'main' 'css' %}
+  {% block extra_head %}
+  {% endblock %}
+</head>
+
+<body>
+{% block content %}
+  <div id="app"></div>
+{% endblock %}
+
+{% block extra_js_before %}
+  <script src="{% url 'js_reverse' %}"></script>
+{% endblock %}
+
+{% render_bundle 'main' 'js' %}
+
+{% block extra_js_after %}
+{% endblock %}
+
+</body>
+</html>

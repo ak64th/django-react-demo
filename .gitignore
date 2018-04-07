@@ -1,0 +1,16 @@
+*.sqlite3
+*.pyc
+*.pyo
+*.log
+*.pot
+.DS_Store
+__pycache__/
+pip-log.txt
+pip-delete-this-directory.txt
+venv/
+node_modules/
+staticfiles/
+.tmp/
+.idea/
+webpack-stats*.json
+client/dist/
