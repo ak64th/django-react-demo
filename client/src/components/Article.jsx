@@ -16,7 +16,8 @@ class Article extends React.Component {
 
     loadArticle(articleId) {
         const url = Urls['article-detail'](articleId);
-        fetch(url)
+        const query = `fields=${['title,description'].join()}`;
+        fetch(`${url}?${query}`)
             .then((resp) => resp.json())
             .then((article) => this.setState({article}));
     }
