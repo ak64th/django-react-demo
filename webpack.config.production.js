@@ -2,7 +2,7 @@
 const BundleTracker = require('webpack-bundle-tracker');
 const webpack = require('webpack');
 const path = require('path');
-const MinifyPlugin = require('babel-minify-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const SRC_DIR = path.resolve(__dirname, 'client/src');
@@ -83,7 +83,7 @@ const config = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
-        new MinifyPlugin()
+        new UglifyJsPlugin()
     ],
 };
 
