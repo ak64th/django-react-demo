@@ -15,7 +15,7 @@ class Article extends React.Component {
     }
 
     loadArticle(articleId) {
-        const url = Urls['article-detail'](articleId);
+        const url = Urls['blog:article-detail'](articleId);
         const query = `fields=${['title,description'].join()}`;
         fetch(`${url}?${query}`)
             .then((resp) => resp.json())

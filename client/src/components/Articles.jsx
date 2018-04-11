@@ -12,7 +12,7 @@ class Articles extends React.Component {
     }
 
     componentDidMount() {
-        const url = Urls['article-list']();
+        const url = Urls['blog:article-list']();
         const query = `fields=${['id,title,slug'].join()}`;
         fetch(`${url}?${query}`)
             .then((resp) => resp.json())

@@ -7,6 +7,8 @@ from . import views
 router = DefaultRouter()
 router.register(r'article', views.ArticleViewSet)
 
+app_name = 'blog'
+
 urlpatterns = [
     url(
         r'^api/', include(router.urls)
@@ -14,6 +16,6 @@ urlpatterns = [
     url(
         r'^.*$',
         TemplateView.as_view(template_name='blog/index.html'),
-        name='blog_entry'
+        name='entry'
     ),
 ]

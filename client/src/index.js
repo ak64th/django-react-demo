@@ -4,7 +4,7 @@ import {render} from 'react-dom';
 import {BrowserRouter} from 'react-router-dom';
 import App from './components/App.jsx';
 
-const basePath = Urls['blog_entry']();
+const basePath = Urls['blog:entry']();
 
 render(
     <BrowserRouter basename={basePath}><App/></BrowserRouter>,
